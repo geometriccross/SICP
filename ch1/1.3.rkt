@@ -17,5 +17,12 @@
   (remove (small a (small b c)) (list a b c)))
 
 (small 3 2)
-(big2 3 5 2)
+(big2 2 4 6)
 
+(apply + (map sqr (list 2 4 6)))
+
+(define (sqr_big2_and_sum a b c)
+  (apply + (map sqr (big2 a b c)))) 
+
+;; expected 16 + 36 = 52
+(sqr_big2_and_sum 2 4 6)
