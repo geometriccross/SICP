@@ -13,8 +13,9 @@
   (cond ((< a b) a)
         (else b)))
 
-(define (smallest a b c)
+(define (big2 a b c)
   (remove (small a (small b c)) (list a b c)))
 
 (small 3 2)
-(smallest 3 5 2)
+(big2 3 5 2)
+
