@@ -1,5 +1,5 @@
 #!/usr/bin/env racket
-#lang scheme
+#lang sicp
 
 (define (square x) (* x x))
 
@@ -26,16 +26,19 @@
 (sqrt (+ 100 37))
 
 ;; 問1.6
-;; (define (new-if predicate then-clause else-clause)
-;;   (cond (predicate then-clause)
-;;         (else else-clause)))
-;;
-;; (define (sqrt-iter-newif guess x)
-;;   (new-if (good-enough? guess x)
-;;       guess
-;;       (sqrt-iter (improve guess x)
-;;                  x)))
-;;
-;; (sqrt-iter-newif 1.0 9)
 
-;; (new-if (= 2 3) 0 5)
+(define (new-if predicate then-clause else-clause)
+    (cond (predicate then-clause)
+          (else else-clause)))
+
+(define (sqrt-iter-newif guess x)
+  (new-if (good-enough? guess x)
+          guess
+          (sqrt-iter (improve guess x) x)))
+
+(define (sqrt-newif x)
+  (sqrt-iter-newif 1.0 x))
+
+(sqrt-newif 2)
+
+;; 無限ループに陥る
