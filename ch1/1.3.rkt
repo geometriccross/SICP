@@ -1,3 +1,4 @@
+#!/usr/bin/env racket
 #lang scheme
 
 ;; 三つの数を引数として取り、大きい二つの数の二畳の輪を返す手続きを定義せよ

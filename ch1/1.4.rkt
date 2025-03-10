@@ -1,3 +1,4 @@
+#!/usr/bin/env racket
 #lang scheme
 
 (define (a-plus-abs-b a b)
