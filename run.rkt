@@ -1,18 +1,7 @@
 #!/usr/bin/env racket
 #lang sicp
 
-(define (displayln x)
-  (display x)
-  (newline))
-
-(define (lndisplay x)
-  (newline)
-  (display x))
-
-(define (lndisplayln x)
-  (newline)
-  (display x)
-  (newline))
+(#%require "./util.rkt")
 
 ; 1.6.rkt
 (#%require "./ch1/1.6.rkt")
