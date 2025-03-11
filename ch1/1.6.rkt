@@ -38,7 +38,7 @@
 (define (sqrt-iter-newif guess x)
   (new-if (good-enough? guess x)
           guess
-          (sqrt-iter (improve guess x) x)))
+          (sqrt-iter-newif (improve guess x) x)))
 
 (#%provide sqrt-newif)
 (define (sqrt-newif x)
