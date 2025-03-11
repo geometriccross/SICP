@@ -8,3 +8,5 @@
   (let* ((quo (/ x pre)))
     (displayln (string-append "quo:" (number->string quo)))
     (/ (+ quo pre) 2)))
+
+(display (newton (newton 1.0 2.0) 2.0))
