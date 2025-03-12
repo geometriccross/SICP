@@ -4,9 +4,9 @@
 (#%require "../util.rkt")
 
 ; Newton法を一回行う
-(define (newton* pre x)
-  (let* ((quo (/ x pre)))
+(define (newton* guess x)
+  (let* ((quo (/ x guess)))
     (displayln (string-append "quo:" (number->string quo)))
-    (/ (+ quo pre) 2)))
+    (/ (+ quo guess) 2)))
 
 (display (newton* (newton* 1.0 2.0) 2.0))
