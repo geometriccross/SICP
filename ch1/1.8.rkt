@@ -4,7 +4,7 @@
 (#%require "../util.rkt")
 (#%require "../ch1/1.6.rkt")
 
-(define (my-newton* x y)
+(define (newton-cube x y)
   (let* ((a (/ x (square y)))
          (b (* 2 y))
          (calced (* (/ 1 3) (+ a b))))
@@ -17,7 +17,6 @@
 
     (if (good-enough? calced x)
         (displayln calced)
-        (my-newton* x calced))))
+        (newton-cube x calced))))
 
-(my-newton* 9.0 1.0)
-
+(newton-cube 9.0 1.0)
