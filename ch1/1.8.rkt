@@ -16,14 +16,18 @@
          (b (* 2 y))
          (calced (* (/ 1 3) (+ a b))))
 
-    (displayln (string-append "x: " (number->string x)))
-    (displayln (string-append "y: " (number->string y)))
-    (displayln (string-append "a: " (number->string a)))
-    (displayln (string-append "b: " (number->string b)))
-    (displayln (string-append "calced: " (number->string calced)))
+    ;; (displayln (string-append "x: " (number->string x)))
+    ;; (displayln (string-append "y: " (number->string y)))
+    ;; (displayln (string-append "a: " (number->string a)))
+    ;; (displayln (string-append "b: " (number->string b)))
+    ;; (displayln (string-append "calced: " (number->string calced)))
 
-    (if (good-enough? calced x)
-        (displayln calced)
+    (if (good-enough-cube? calced x)
+        calced
         (newton-cube x calced))))
 
-(newton-cube 9.0 1.0)
+(displayln
+ (string-append
+  "result: "
+  (number->string (newton-cube 9.0 1.0))))
+
