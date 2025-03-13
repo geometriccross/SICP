@@ -4,6 +4,13 @@
 (#%require "../util.rkt")
 (#%require "../ch1/1.6.rkt")
 
+(#%provide cube)
+(define (cube x) (* x x x))
+
+(#%provide good-enough-cube?)
+(define (good-enough-cube? guess x)
+  (< (abs (- (cube guess) x)) 0.001))
+
 (define (newton-cube x y)
   (let* ((a (/ x (square y)))
          (b (* 2 y))
